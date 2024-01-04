@@ -1,0 +1,14 @@
+{% extends "padre.html" %}
+{% load static %}
+{% block ContenidoQueCambia %}
+<h1>Formulario - Agregar Profesor</h1>
+<body>
+    <form action="/Profesores/"     method="post">{% csrf_token %}
+        <p> Nombre: <input type = "text" name="nombre">
+        <p> Apellido: <input type = "text" name="apellido">
+        <p> Email: <input type = "text" name="email">
+            <input type = "submit" value="Enviar">
+    </form>
+</body>
+</head>
+{% endblock %}
